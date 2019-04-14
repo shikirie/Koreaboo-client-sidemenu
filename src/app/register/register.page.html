@@ -1,0 +1,35 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Create Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <form onsubmit="processForm(event)">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Email Address <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="text" oninput="handleEmailValue(event)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Username <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="text" oninput="handleNameValue(event)"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="password" oninput="handlePasswordValue(event)"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button color="danger" expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+    </div>
+  </form>
+</ion-content>
+<!--<ion-alert-controller></ion-alert-controller>-->
