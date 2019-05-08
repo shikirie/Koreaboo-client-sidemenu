@@ -13,4 +13,12 @@ export class HomePage {
     this.router.navigate(['/kdrama']);
   }
 
+  goKdrama1() {
+    this.router.navigate(['/kdrama1']);
+  }
+
+  goKdrama2() {
+    this.router.navigate(['/kdrama2']);
+  }
+
 }

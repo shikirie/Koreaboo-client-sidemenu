@@ -1,51 +1,55 @@
 <ion-header>
-    <ion-toolbar color="danger">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>
-        K-Drama
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-      <ion-card (click)="goKdrama()">
-          <ion-card-header>
-            <ion-card-subtitle>Korean Drama</ion-card-subtitle>
-            <ion-card-title>Beautiful World
-                <img src="/assets/images/beautiful.jpg">
-            </ion-card-title>
-          </ion-card-header>
-              <ion-card-content>
-                <div class="ion-text-justify">
-                    "Beautiful World" takes over the JTBC Fridays & Saturdays 23:00 time slot previously occupied by "Legal High" and followed by "Aide" May, 2019. 
-                </div>
-              </ion-card-content>
-      </ion-card>
-  
-        <ion-card>
-            <ion-card-header>
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-              <ion-card-title>Card Title</ion-card-title>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Keep close to Nature's heart... and break clear away, once in awhile,
-              and climb a mountain or spend a week in the woods. Wash your spirit clean.
-            </ion-card-content>
-          </ion-card>
-  
-          <ion-card>
-              <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                <ion-card-title>Card Title</ion-card-title>
-              </ion-card-header>
-            
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
-            </ion-card>
-      
-  
-  </ion-content>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      K-Drama
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="dark">
+  <ion-card color="light" (click)="goKdrama()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Drama</ion-card-subtitle>
+      <ion-card-title>Welcome to Waikiki</ion-card-title>
+      <img src="/assets/images/waikiki.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+        These 3 men run the guest house Waikiki in Itaewon, South Korea. Their guest house is facing bankruptcy and then
+        a mysterious baby and single mother appear at Waikiki.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" (click)="goKdrama1()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Drama</ion-card-subtitle>
+      <ion-card-title>The Beauty Inside</ion-card-title>
+      <img src="/assets/images/beauty.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+        A woman changes her appearance whenever a certain supernatural phenomenon occurs. A man falls in love with this
+        woman.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" (click)="goKdrama2()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Drama</ion-card-subtitle>
+      <ion-card-title>Touch Your Heart</ion-card-title>
+      <img src="/assets/images/touch.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+        Oh Yoon-Seo is a popular actress. She is famous for her beautiful appearance, but her acting is bad. She gets
+        involved in a scandal with the son from a chaebol family. Her acting career declines precipitously.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

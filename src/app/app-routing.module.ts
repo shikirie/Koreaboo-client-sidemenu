@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'kdrama', loadChildren: './kdrama/kdrama.module#KdramaPageModule' },
   { path: 'home-kpop', loadChildren: './home-kpop/home-kpop.module#HomeKpopPageModule' },
   { path: 'home-kmovie', loadChildren: './home-kmovie/home-kmovie.module#HomeKmoviePageModule' },
-  { path: 'home-vshow', loadChildren: './home-vshow/home-vshow.module#HomeVshowPageModule' }
+  { path: 'home-vshow', loadChildren: './home-vshow/home-vshow.module#HomeVshowPageModule' },  { path: 'kdrama1', loadChildren: './kdrama1/kdrama1.module#Kdrama1PageModule' },
+  { path: 'kdrama2', loadChildren: './kdrama2/kdrama2.module#Kdrama2PageModule' }
+
 ];
 
 @NgModule({
