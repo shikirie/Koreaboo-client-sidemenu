@@ -15,7 +15,10 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'kpop', loadChildren: './kpop/kpop.module#KpopPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  { path: 'kdrama', loadChildren: './kdrama/kdrama.module#KdramaPageModule' }
+  { path: 'kdrama', loadChildren: './kdrama/kdrama.module#KdramaPageModule' },
+  { path: 'home-kpop', loadChildren: './home-kpop/home-kpop.module#HomeKpopPageModule' },
+  { path: 'home-kmovie', loadChildren: './home-kmovie/home-kmovie.module#HomeKmoviePageModule' },
+  { path: 'home-vshow', loadChildren: './home-vshow/home-vshow.module#HomeVshowPageModule' }
 ];
 
 @NgModule({

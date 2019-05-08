@@ -13,13 +13,23 @@ import { AccPopoverComponent } from './acc-popover/acc-popover.component';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'K-Drama',
       url: '/home',
       icon: 'md-home'
     },
     {
       title: 'K-Pop',
-      url: '/kpop',
+      url: '/home-kpop',
+      icon: 'md-musical-notes'
+    },
+    {
+      title: 'K-Movie',
+      url: '/home-kmovie',
+      icon: 'md-musical-notes'
+    },
+    {
+      title: 'Variety Show',
+      url: '/home-vshow',
       icon: 'md-musical-notes'
     }
   ];

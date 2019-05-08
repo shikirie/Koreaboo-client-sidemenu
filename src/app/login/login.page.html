@@ -1,31 +1,38 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <ion-title><ion-icon name="person"></ion-icon> Login </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="person"></ion-icon> Login </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-    <form onsubmit="processForm(event)">
-      <ion-list lines="full" class="ion-no-margin ion-no-padding">
-        <ion-item>
-          <ion-label position="floating">Email Address <ion-text color="danger">*</ion-text>
-          </ion-label>
-          <ion-input required type="text" oninput="handleEmailValue(event)"></ion-input>
-        </ion-item>
+  <form onsubmit="processForm(event)">
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="floating">Email Address
+          <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="text" oninput="handleEmailValue(event)"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Password <ion-text color="danger">*</ion-text>
-          </ion-label>
-          <ion-input required type="text" oninput="handleNameValue(event)"></ion-input>
-        </ion-item>
-      </ion-list>
+      <ion-item>
+        <ion-label position="floating">Password
+          <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="text" oninput="handleNameValue(event)"></ion-input>
+      </ion-item>
+    </ion-list>
 
     <div class="ion-padding">
       <ion-button color="danger" expand="block" type="submit" class="ion-no-margin">Sign In</ion-button>
     </div>
-        <div text-center>
-      If you don't have an account, please <a routerLink='/register'>
+    <div text-center>
+      If you don't have an account, please
+      <a routerLink='/register'>
         register</a> first!
-        </div>
+    </div>
   </form>
 </ion-content>
