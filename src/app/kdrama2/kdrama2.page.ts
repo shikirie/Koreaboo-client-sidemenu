@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-kdrama2',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Kdrama2Page implements OnInit {
 
-  constructor() { }
+  constructor(public router : Router) { }
+
+  goHome() {
+    this.router.navigate(['/home']);
+  }
 
   ngOnInit() {
   }

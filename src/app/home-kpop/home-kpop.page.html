@@ -1,9 +1,52 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home-kpop</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      K-Pop
+    </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content color="dark">
+  <ion-card color="light" (click)="goBP()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Music</ion-card-subtitle>
+      <ion-card-title>BLACKPINK</ion-card-title>
+      <img src="/assets/images/music/bp/bpmain.jpeg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+          BLACKPINK debuted on August 8, 2016 under YG Entertainment.
+      </div>
+    </ion-card-content>
+  </ion-card>
 
-<ion-content>
+  <ion-card color="light" (click)="goRV()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Music</ion-card-subtitle>
+      <ion-card-title>Red Velvet</ion-card-title>
+      <img src="/assets/images/music/rv/rvmain.jpeg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+          Red Velvet debuted on August 1, 2014 under SM Entertainment.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" (click)="goMM()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Music</ion-card-subtitle>
+      <ion-card-title>Mamamoo</ion-card-title>
+      <img src="/assets/images/music/mm/mmmain.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+          Mamamoo debuted on June 18, 2014 under Rainbow Bridge World.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>

@@ -19,7 +19,10 @@ const routes: Routes = [
   { path: 'home-kpop', loadChildren: './home-kpop/home-kpop.module#HomeKpopPageModule' },
   { path: 'home-kmovie', loadChildren: './home-kmovie/home-kmovie.module#HomeKmoviePageModule' },
   { path: 'home-vshow', loadChildren: './home-vshow/home-vshow.module#HomeVshowPageModule' },  { path: 'kdrama1', loadChildren: './kdrama1/kdrama1.module#Kdrama1PageModule' },
-  { path: 'kdrama2', loadChildren: './kdrama2/kdrama2.module#Kdrama2PageModule' }
+  { path: 'kdrama2', loadChildren: './kdrama2/kdrama2.module#Kdrama2PageModule' },
+  { path: 'kpop1', loadChildren: './kpop1/kpop1.module#Kpop1PageModule' },
+  { path: 'kpop2', loadChildren: './kpop2/kpop2.module#Kpop2PageModule' },
+  { path: 'kmovie1', loadChildren: './kmovie1/kmovie1.module#Kmovie1PageModule' }
 
 ];
 

@@ -1,9 +1,11 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+    <ion-buttons slot="start" (click)="goHome()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
     </ion-buttons>
-    <ion-title>Drama</ion-title>
+    <ion-title>K-Drama</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +13,7 @@
   <ion-text>
     <h1><b>Welcome to Waikiki</b></h1>
   </ion-text>
-  <img src="/assets/images/waikiki.jpg">
+  <img src="/assets/images/drama/waikiki.jpg">
   <h2><b>Profile</b></h2>
   <ul>
     <li>
