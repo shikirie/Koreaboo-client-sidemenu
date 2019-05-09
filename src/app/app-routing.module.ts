@@ -24,7 +24,8 @@ const routes: Routes = [
   { path: 'kpop2', loadChildren: './kpop2/kpop2.module#Kpop2PageModule' },
   { path: 'kmovie1', loadChildren: './kmovie1/kmovie1.module#Kmovie1PageModule' },
   { path: 'kmovie2', loadChildren: './kmovie2/kmovie2.module#Kmovie2PageModule' },
-  { path: 'vshow1', loadChildren: './vshow1/vshow1.module#Vshow1PageModule' }
+  { path: 'vshow1', loadChildren: './vshow1/vshow1.module#Vshow1PageModule' },
+  { path: 'vshow2', loadChildren: './vshow2/vshow2.module#Vshow2PageModule' }
 
 ];
 
