@@ -22,7 +22,9 @@ const routes: Routes = [
   { path: 'kdrama2', loadChildren: './kdrama2/kdrama2.module#Kdrama2PageModule' },
   { path: 'kpop1', loadChildren: './kpop1/kpop1.module#Kpop1PageModule' },
   { path: 'kpop2', loadChildren: './kpop2/kpop2.module#Kpop2PageModule' },
-  { path: 'kmovie1', loadChildren: './kmovie1/kmovie1.module#Kmovie1PageModule' }
+  { path: 'kmovie1', loadChildren: './kmovie1/kmovie1.module#Kmovie1PageModule' },
+  { path: 'kmovie2', loadChildren: './kmovie2/kmovie2.module#Kmovie2PageModule' },
+  { path: 'vshow1', loadChildren: './vshow1/vshow1.module#Vshow1PageModule' }
 
 ];
 
