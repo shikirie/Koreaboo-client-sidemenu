@@ -1,9 +1,60 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>vshow1</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" (click)="goHomeVshow()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>K-Variety Show</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark" padding>
 
+  <h1><b>We Got Married</b></h1>
+
+  <img src="/assets/images/vshow/WGM.jpg">
+  <h2><b>Profile</b></h2>
+  <ul>
+    <li>
+      <b>As Known As: </b>We Got Married (우리 결혼했어요)</li>
+    <li>
+      <b>Air Time:</b> 17h.<b>Next Ep:</b> 17h00, Saturday</li>
+    <li>
+      <b>Director: </b> Im Jeong-ah, Jeon Seong-ho</li>
+    <li>
+      <b>Broadcast Network: </b>MBC</li>
+    <li>
+      <b>Released: </b> 2008 </li>
+  </ul>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>We Got Married (Hangul: 우리 결혼했어요) is a South Korean reality variety show,
+      and used to be one segment of the Sunday Sunday Night program. It currently airs
+      on Saturday 17:00 KST on MBC. First broadcast in 2008, the show pairs up Korean
+      celebrities to show what life would be like if they were married. Each week,
+      couples have assigned missions to complete, with candid interviews of the
+      participants to reveal their thoughts and feelings.
+    </p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Multiple Couples</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

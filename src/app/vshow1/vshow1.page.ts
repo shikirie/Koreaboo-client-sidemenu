@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vshow1',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Vshow1Page implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) { }
 
+  goHomeVshow() {
+    this.router.navigate(['/home-vshow']);
+  }
+  
   ngOnInit() {
   }
 

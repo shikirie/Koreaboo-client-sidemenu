@@ -9,10 +9,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
-  <ion-text>
-    <h1><b>Touch Your Heart</b></h1>
-  </ion-text>
+<ion-content color="dark" padding>
+
+  <h1><b>Touch Your Heart</b></h1>
   <img src="/assets/images/drama/touch.jpg">
   <h2><b>Profile</b></h2>
   <ul>
@@ -33,28 +32,38 @@
     <li>
       <b>Release Date: </b>February 6 - March 28, 2019</li>
   </ul>
-  <ion-text>
-    <h2><b>Synopsis by KOREABOO</b></h2>
-    <div class="ion-text-left">
-      <p>Oh Yoon-Seo is a popular actress. She is famous for her beautiful appearance, but her acting is bad. She gets
-        involved in a scandal with the son from a chaebol family. Her acting career declines precipitously.
-      </p>
-      <p>Oh Yoon-Seo hears that a famous screenwriter wants her to play the lead female role for a drama series. The
-        character works as a secretary for a lawyer. To gain experience for the role, Oh Yoon-Seo is required to work as
-        a lawyer's secretary for a few months. Meanwhile, Kwon Jung-Rok is an attorney for a law firm. He is arrogant
-        and cold-hearted. One day, his boss asks Kwon Jung-Rok to let actress Oh Yoon-Seo work as his secretary for 3
-        months. He is not happy about the situation, but he has to accept.</p>
-    </div>
-  </ion-text>
-  <ion-text>
-    <h2><b>Cast</b></h2>
-    <ul>
-      <p>Lee Dong-Wook as Kwon Jung-Rok</p>
-      <p>Yoo In-Na as Oh Yoon-Seo / Oh Jin-Sim</p>
-      <p>Lee Sang-Woo as Kim Se-Won</p>
-      <p>Son Sung-Yoon as Yoo Yeo-Reum</p>
-      <p>Shim Hyung-Tak as Choi Yoon-Hyuk</p>
-      <p>Park Kyung-Hye as Dan Moon-Hee</p>
-    </ul>
-  </ion-text>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>Oh Yoon-Seo is a popular actress. She is famous for her beautiful appearance, but her acting is bad. She gets
+      involved in a scandal with the son from a chaebol family. Her acting career declines precipitously.
+    </p>
+    <p>Oh Yoon-Seo hears that a famous screenwriter wants her to play the lead female role for a drama series. The
+      character works as a secretary for a lawyer. To gain experience for the role, Oh Yoon-Seo is required to work as
+      a lawyer's secretary for a few months. Meanwhile, Kwon Jung-Rok is an attorney for a law firm. He is arrogant
+      and cold-hearted. One day, his boss asks Kwon Jung-Rok to let actress Oh Yoon-Seo work as his secretary for 3
+      months. He is not happy about the situation, but he has to accept.</p>
+  </div>
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Lee Dong-Wook as Kwon Jung-Rok</p>
+    <p>Yoo In-Na as Oh Yoon-Seo / Oh Jin-Sim</p>
+    <p>Lee Sang-Woo as Kim Se-Won</p>
+    <p>Son Sung-Yoon as Yoo Yeo-Reum</p>
+    <p>Shim Hyung-Tak as Choi Yoon-Hyuk</p>
+    <p>Park Kyung-Hye as Dan Moon-Hee</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

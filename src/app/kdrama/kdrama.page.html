@@ -9,10 +9,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
-  <ion-text>
-    <h1><b>Welcome to Waikiki</b></h1>
-  </ion-text>
+<ion-content color="dark" padding>
+
+  <h1><b>Welcome to Waikiki</b></h1>
   <img src="/assets/images/drama/waikiki.jpg">
   <h2><b>Profile</b></h2>
   <ul>
@@ -33,27 +32,38 @@
     <li>
       <b>Release Date: </b>February 5 - April 17, 2018</li>
   </ul>
-  <ion-text>
-    <h2><b>Synopsis by KOREABOO</b></h2>
-    <div class="ion-text-left">
-      <p>Kang Dong-Goo (Kim Jung-Hyun) dreams of becoming a movie director, but he is cynical due to bad luck. Cheon
-        Joon-Ki (Lee Yi-Kyung) wanted to follow in his father's footsteps and become an actor, but he is now just a
-        minor actor. Bong-Doo-Sik (Son Seung-Won) came to Seoul to become a scenario writer, but things have not been
-        easy for him.
-      </p>
-      <p>These 3 men run the guest house Waikiki in Itaewon, South Korea. Their guest house is facing bankruptcy and
-        then a mysterious baby and single mother appear at Waikiki.</p>
-    </div>
-  </ion-text>
-  <ion-text>
-    <h2><b>Cast</b></h2>
-    <ul>
-      <p>Kim Jung-Hyun as Kang Dong-Goo</p>
-      <p>Lee Yi-Kyung as Lee Joon-Ki</p>
-      <p>Son Seung-Won as Bong-Doo-Sik</p>
-      <p>Jung In-Sun as Han Yoon-A</p>
-      <p>Go Won-Hee as Kang Seo-Jin</p>
-      <p>Lee Joo-Woo as Min Soo-A</p>
-    </ul>
-  </ion-text>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>Kang Dong-Goo (Kim Jung-Hyun) dreams of becoming a movie director, but he is cynical due to bad luck. Cheon
+      Joon-Ki (Lee Yi-Kyung) wanted to follow in his father's footsteps and become an actor, but he is now just a
+      minor actor. Bong-Doo-Sik (Son Seung-Won) came to Seoul to become a scenario writer, but things have not been
+      easy for him.
+    </p>
+    <p>These 3 men run the guest house Waikiki in Itaewon, South Korea. Their guest house is facing bankruptcy and
+      then a mysterious baby and single mother appear at Waikiki.</p>
+  </div>
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Kim Jung-Hyun as Kang Dong-Goo</p>
+    <p>Lee Yi-Kyung as Lee Joon-Ki</p>
+    <p>Son Seung-Won as Bong-Doo-Sik</p>
+    <p>Jung In-Sun as Han Yoon-A</p>
+    <p>Go Won-Hee as Kang Seo-Jin</p>
+    <p>Lee Joo-Woo as Min Soo-A</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

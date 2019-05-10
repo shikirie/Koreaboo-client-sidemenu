@@ -1,9 +1,78 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>K - Movie</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" (click)="goHomeKmovie()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>K-Movie</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark" padding>
 
+  <h1><b>Fabricated City</b></h1>
+
+  <img src="/assets/images/movie/fabricatedcity.jpg">
+  <h2><b>Profile</b></h2>
+  <ul>
+    <li>
+      <b>Movie: </b>Fabricated City</li>
+    <li>
+      <b>Revised Romanization: </b>Jojakdwen Doshi</li>
+    <li>
+      <b>Hangul: </b>조작된 도시</li>
+    <li>
+      <b>Director: </b>Park Kwang-Hyun</li>
+    <li>
+      <b>Writer: </b>Park Kwang-Hyun, Oh Sang-Ho</li>
+    <li>
+      <b>Producer: </b>Jang Young-Hwan, Jung Jae-Wook, Kim Hyun-Chul</li>
+    <li>
+      <b>Cinematographer: </b>Nam Dong-Geun</li>
+    <li>
+      <b>Release Date: </b>February 9, 2017</li>
+    <li>
+      <b>Runtime: </b>126 Min</li>
+    <li>
+      <b>Genre: </b>Action, Crime</li>
+    <li>
+      <b>Distributor:</b> CJ Entertainment</li>
+
+  </ul>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>In real life, Kwon Yoo (Ji Chang-Wook) is unemployed,
+      but in the virtual game world he is the best leader.
+      Kwon Yoo is then framed for a murder. With the help of hacker Yeo-Wool (Shim Eun-Kyung),
+      he tries to uncover the truth behind the murder case.
+    </p>
+    <p>These 3 men run the guest house Waikiki in Itaewon,
+      South Korea. Their guest house is facing bankruptcy and
+      then a mysterious baby and single mother appear at Waikiki.</p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Ji Chang-Wook as Kwon Yoo</p>
+    <p>Shim Eun-Kyung as Yeo-Wool</p>
+    <p>Oh Jung-Se as Min Chung-Sang</p>
+    <p>Ahn Jae-Hong as Demolition</p>
+    <p>Kim Sang-Ho as Ma Deok-Soo</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

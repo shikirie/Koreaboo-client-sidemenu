@@ -9,9 +9,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
+<ion-content color="dark" padding>
   <h1><b>Mamamoo</b></h1>
-  <img src="/assets/images/music/mm/mmmain.jpg">
+  <img src="/assets/images/music/mm/mm.jpg">
   <h2><b>Introduction to BLACKPINK</b></h2>
   <div class="ion-text-left">
     <p>
@@ -63,5 +63,18 @@
       <li><b>Date of Birth: </b>26 years old, born December 22, 1992</li>
       <li><b>Position: </b>Main Rapper, Main Dancer, Vocalist</li>
     </ul>
+  </div>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

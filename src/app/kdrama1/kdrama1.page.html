@@ -9,10 +9,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
-  <ion-text>
-    <h1><b>The Beauty Inside</b></h1>
-  </ion-text>
+<ion-content color="dark" padding>
+
+  <h1><b>The Beauty Inside</b></h1>
+
   <img src="/assets/images/drama/beauty.jpg">
   <h2><b>Profile</b></h2>
   <ul>
@@ -33,30 +33,43 @@
     <li>
       <b>Release Date: </b>October 1 - November 20, 2018</li>
   </ul>
-  <ion-text>
-    <h2><b>Synopsis by KOREABOO</b></h2>
-    <div class="ion-text-left">
-      <p>A woman changes her appearance whenever a certain supernatural phenomenon occurs. A man falls in love with this
-        woman.
-      </p>
-      <p>Han Se-Kye (Seo Hyun-Jin) is a top actress. She is known as a troublemaker and the object of many rumors. Her
-        life is a mystery, but, in reality, she suffers from an unusual phenomenon. At a certain point every month, her
-        appearance changes to a different person. She lives one week out of every month with a different appearance. Han
-        Se-Kye meets Seo Do-Jae (Lee Min-Ki). Seo Do-Jae is an executive at an airline company. He seems perfect with an
-        attractive appearance and possessing smarts, but he suffers from an inability to recognize faces. He hides this
-        disability and tries hard to memorize people by their habits and mannerisms. The only person's face that he is
-        able to recognize is Han Se-Kye. By meeting her, his life changes.</p>
-    </div>
-  </ion-text>
-  <ion-text>
-    <h2><b>Cast</b></h2>
-    <ul>
-      <p>Seo Hyun-Jin as Han Se-Kye</p>
-      <p>Lee Min-Ki as Seo Do-Jae</p>
-      <p>Lee Da-Hee-Won as Kang Sa-Ra</p>
-      <p>Ahn Jae-Hyeon as Ryu Eun-Ho</p>
-      <p>Lee Tae-Ri as Jung Joo-Hwan</p>
-      <p>Moon Ji-In as Yoo Woo-Mi</p>
-    </ul>
-  </ion-text>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>A woman changes her appearance whenever a certain supernatural phenomenon occurs. A man falls in love with this
+      woman.
+    </p>
+    <p>Han Se-Kye (Seo Hyun-Jin) is a top actress. She is known as a troublemaker and the object of many rumors. Her
+      life is a mystery, but, in reality, she suffers from an unusual phenomenon. At a certain point every month, her
+      appearance changes to a different person. She lives one week out of every month with a different appearance. Han
+      Se-Kye meets Seo Do-Jae (Lee Min-Ki). Seo Do-Jae is an executive at an airline company. He seems perfect with an
+      attractive appearance and possessing smarts, but he suffers from an inability to recognize faces. He hides this
+      disability and tries hard to memorize people by their habits and mannerisms. The only person's face that he is
+      able to recognize is Han Se-Kye. By meeting her, his life changes.</p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Seo Hyun-Jin as Han Se-Kye</p>
+    <p>Lee Min-Ki as Seo Do-Jae</p>
+    <p>Lee Da-Hee-Won as Kang Sa-Ra</p>
+    <p>Ahn Jae-Hyeon as Ryu Eun-Ho</p>
+    <p>Lee Tae-Ri as Jung Joo-Hwan</p>
+    <p>Moon Ji-In as Yoo Woo-Mi</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>

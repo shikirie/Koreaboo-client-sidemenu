@@ -1,9 +1,90 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>kmovie2</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" (click)="goHomeKmovie()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>K-Movie</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark" padding>
+
+  <h1><b>Train To Busan</b></h1>
+
+  <img src="/assets/images/movie/traintobusan.jpg">
+  <h2><b>Profile</b></h2>
+  <ul>
+    <li>
+      <b>Movie: </b>Train To Busan</li>
+    <li>
+      <b>Revised Romanization: </b>Busanhaeng</li>
+    <li>
+      <b>Hangul: </b>부산행</li>
+    <li>
+      <b>Director: </b>Yeon Sang-Ho</li>
+    <li>
+      <b>Writer: </b> TPark Joo-Suk, Yeon Sang-Ho </li>
+    <li>
+      <b>Producer: </b>Lee Dong-Ha, Kim Yeon-Ho</li>
+    <li>
+      <b>Cinematographer: </b>Lee Hyung-Duk</li>
+    <li>
+      <b>Release Date: </b>July 20, 2016</li>
+    <li>
+      <b>Runtime: </b>118 Min</li>
+    <li>
+      <b>Genre: </b>Action / Suspense-Thriller / Train / Zombie</li>
+    <li>
+      <b>Distributor:</b> Next Entertainment World</li>
+
+  </ul>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>Seok-Woo (Gong Yoo) is a fund manager in Seoul.
+      He is separated from his wife and lives with his
+      daughter Soo-An (Kim Soo-Ahn). Seok-Woo doesn't
+      spend much time with his daughter or show affection
+      to her. On the night before Soo-An's birthday, Soo-An
+      insists on seeing her mother for her birthday. Seok-Woo
+      has no other choice, but to take her to Busan. Early the
+      next morning, they board the KTX train for Busan at Seoul Station.
+    </p>
+    <p>Before the KTX train leaves Seoul Station,
+      a zombie like girl jumps onto the train.
+      The girl is infected with a horrific virus that is
+      spreading like wildfire. Seok-Woo, Soo-An and the other
+      passengers on the KTX train must now fight for their lives.</p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Gong Yoo as Seok-Woo</p>
+    <p>Jung Yu-Mi as Sung-Gyeong</p>
+    <p>Ma Dong-Seok as Sang-Hwa</p>
+    <p>Kim Soo-Ahn as Soo-An</p>
+    <p>Kim Eui-Sung as Yong-Suk</p>
+    <p>Choi Woo-Sik as Young-Gook</p>
+    <p>Ahn So-Hee as Jin-Hee</p>
+    <p>Jang Hyuk-Jin as Ki-Chul</p>
+    <p>Shim Eun-Kyung as Stowaway</p>
+    <p>Kong Hyo-Jin as Han Bok-Nyeo</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>

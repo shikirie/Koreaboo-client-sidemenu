@@ -1,9 +1,58 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home-vshow</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        K-Variety Show
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content color="dark">
+    <ion-card color="light" (click)="goVshow()">
+      <ion-card-header>
+        <ion-card-subtitle>Korean Variety Show</ion-card-subtitle>
+        <ion-card-title>RUNNING MAN</ion-card-title>
+        <img src="/assets/images/vshow/RM.jpg">
+      </ion-card-header>
+      <ion-card-content>
+        <div class="ion-text-left">
+            Running Man (Korean: 런닝맨) is a South Korean variety show; 
+            a part of SBS's Good Sunday lineup, along with Roommate. 
+            It was first aired on July 11, 2010.
+        </div>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card color="light" (click)="goVshow1()">
+      <ion-card-header>
+        <ion-card-subtitle>Korean Variety Show</ion-card-subtitle>
+        <ion-card-title>We Got Married</ion-card-title>
+        <img src="/assets/images/vshow/WGM.jpg">
+      </ion-card-header>
+      <ion-card-content>
+        <div class="ion-text-left">
+            We Got Married (Hangul: 
+            우리 결혼했어요) is a South Korean reality variety show, 
+            and used to be one segment of the Sunday Sunday Night program.
+        </div>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card color="light" (click)="goVshow2()">
+      <ion-card-header>
+        <ion-card-subtitle>Korean Variety Show</ion-card-subtitle>
+        <ion-card-title>Weekly Idol</ion-card-title>
+        <img src="/assets/images/vshow/WI.jpg">
+      </ion-card-header>
+      <ion-card-content>
+        <div class="ion-text-left">
+            The show consists of several segments, one of 
+            which is called "Real Chart! Idol Self-Ranking"
+        </div>
+      </ion-card-content>
+    </ion-card>
+  
+  
+  </ion-content>

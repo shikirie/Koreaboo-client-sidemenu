@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="dark">
+<ion-content color="dark" padding>
   <h1><b>BLACKPINK</b></h1>
   <img src="/assets/images/music/bp/bpmain.jpeg">
   <h2><b>Introduction to BLACKPINK</b></h2>
@@ -89,5 +89,18 @@
       <li><b>Blood Type: </b>B</li>
       <li><b>Position: </b>Main Vocalist, Lead Dancer</li>
     </ul>
+  </div>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

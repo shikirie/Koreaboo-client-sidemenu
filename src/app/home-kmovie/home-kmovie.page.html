@@ -1,9 +1,54 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home-kmovie</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        K-Movie
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
+  <ion-card color="light" (click)="goKmovie()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Movie</ion-card-subtitle>
+      <ion-card-title>FABRICATED CITY</ion-card-title>
+      <img src="/assets/images/movie/fabricatedcity.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+        Filming began July 1, 2015 in Yongsan, Seoul,
+        South Korea and finished December 29, 2015 in Seoul.
+      </div>
+    </ion-card-content>
+  </ion-card>
 
+  <ion-card color="light" (click)="goKmovie1()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Movie</ion-card-subtitle>
+      <ion-card-title>BE WITH YOU</ion-card-title>
+      <img src="/assets/images/movie/bewithyou.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+        Filming began August 12,
+        2017 and finished November 12, 2017 in Daejeon, South Korea.
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light" (click)="goKmovie2()">
+    <ion-card-header>
+      <ion-card-subtitle>Korean Movie</ion-card-subtitle>
+      <ion-card-title>TRAIN TO BUSAN</ion-card-title>
+      <img src="/assets/images/movie/traintobusan.jpg">
+    </ion-card-header>
+    <ion-card-content>
+      <div class="ion-text-left">
+        Filming began April 26, 2015 and finished August 19, 2015
+        Movie is set one day after Yeon Sang-Ho's animation film "Seoul Station."
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

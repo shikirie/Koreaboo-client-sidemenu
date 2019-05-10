@@ -1,9 +1,81 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>kmovie1</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" (click)="goHomeKmovie()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>K-Movie</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark" padding>
 
+  <h1><b>Be With You</b></h1>
+
+  <img src="/assets/images/movie/bewithyou.jpg">
+  <h2><b>Profile</b></h2>
+  <ul>
+    <li>
+      <b>Movie: </b>Be With You / Now, I Am Coming To See You</li>
+    <li>
+      <b>Revised Romanization: </b>Jigeum Mannareo Gabmida</li>
+    <li>
+      <b>Hangul: </b>지금 만나러 갑니다</li>
+    <li>
+      <b>Director: </b>Lee Jang-Hoon</li>
+    <li>
+      <b>Writer: </b> Takuji Ichikawa </li>
+    <li>
+      <b>Producer: </b>Yang Soo-Jung, Kim Jae-Joong</li>
+    <li>
+      <b>Cinematographer: </b>Jo Sang-Yoon</li>
+    <li>
+      <b>Release Date: </b>March 14, 2018</li>
+    <li>
+      <b>Runtime: </b>131 Min</li>
+    <li>
+      <b>Genre: </b>Action, Crime</li>
+    <li>
+      <b>Distributor:</b> Lotte Entertainment</li>
+
+  </ul>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>Woo-Jin (So Ji-Sub) takes care of his son Ji-Ho (Kim Ji-Hwan)
+      alone after his wife Soo-A (Son Ye-Jin) passed away.
+      Before she passed away, she promised she would be back on
+      a rainy day one year later.
+    </p>
+    <p>One year later, Soo-A appears again, but she does not remember anything.</p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>So Ji-Sub as Woo-Jin</p>
+    <p>Son Ye-Jin as Soo - A</p>
+    <p>Kim Ji-Hwan as Ji-Ho</p>
+    <p>Ko Chang-Seok as Hong-Goo</p>
+    <p>Lee Jon-Hyuk as Swimming Instructor Choi</p>
+    <p>Son Yeo-Eun as Hyung-Jung</p>
+    <p>Lee You-Jin as Woo-Jin(Young)</p>
+    <p>Kim Hyun-Soo as Soo-A(Young)</p>
+    <p>Park Seo-Joon as Ji-Ho(Adult)</p>
+    <p>Kong Hyo-Jin as Han Bok-Nyeo</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

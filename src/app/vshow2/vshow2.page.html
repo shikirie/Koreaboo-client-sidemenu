@@ -1,9 +1,66 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>vshow2</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" (click)="goHomeVshow()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>K-Variety Show</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark" padding>
 
+  <h1><b>Weekly Idol</b></h1>
+
+  <img src="/assets/images/vshow/WI.jpg">
+  <h2><b>Profile</b></h2>
+  <ul>
+    <li>
+      <b>As Known As: </b>Weekly Idol (주간 아이돌)</li>
+    <li>
+      <b>Air Time:</b> 18h.<b>Next Ep:</b> 18h00, Thursday</li>
+    <li>
+      <b>Director: </b> Lee Soon-Ok</li>
+    <li>
+      <b>Broadcast Network: </b>MBC</li>
+    <li>
+      <b>Released: </b>July 23, 2011 </li>
+  </ul>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>The show consists of several segments, one of which is called
+      "Real Chart! Idol Self-Ranking", where idols are asked to rank
+      each other on different topics and the results are then presented.
+      "Idol of the Week", the second segment, on the other hand, features
+      idol groups as the invited guests. The first idol group to record an
+      episode and appear in the segment was INFINITE. This segment usually
+      consists of several featured corners.
+    </p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <li>
+      <p>Jeong Hyeong-don (Doni)</p>
+    </li>
+    <li>
+      <p>Deffcon</p>
+    </li>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

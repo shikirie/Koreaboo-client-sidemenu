@@ -25,12 +25,12 @@ export class AppComponent {
     {
       title: 'K-Movie',
       url: '/home-kmovie',
-      icon: 'md-musical-notes'
+      icon: 'videocam'
     },
     {
       title: 'Variety Show',
       url: '/home-vshow',
-      icon: 'md-musical-notes'
+      icon: 'videocam'
     }
   ];
 

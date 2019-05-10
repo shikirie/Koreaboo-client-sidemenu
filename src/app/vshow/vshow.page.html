@@ -1,9 +1,74 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Variety Show</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start" (click)="goHomeVshow()">
+      <ion-button>
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>K-Variety Show</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark" padding>
 
+  <h1><b>Running Man</b></h1>
+
+  <img src="/assets/images/vshow/RM.jpg">
+  <h2><b>Profile</b></h2>
+  <ul>
+    <li>
+      <b>As Known As: </b>Running Man</li>
+    <li>
+      <b>Air Time:</b> 17h.<b>Next Ep:</b> 17h00, Sunday</li>
+    <li>
+      <b>Director: </b>Jo Hyo-jin, Im Hyung-taek, Kim Ju-hyung</li>
+    <li>
+      <b>Broadcast Network: </b>SBS</li>
+    <li>
+      <b>Released: </b> 2010 </li>
+  </ul>
+
+  <h2><b>Synopsis by KOREABOO</b></h2>
+  <div class="ion-text-left">
+    <p>Running Man is a South Korean variety show; a part of SBS's Good Sunday lineup,
+      along with Roommate. It was first aired on July 11, 2010. This show was
+      classified as an "urban action variety"; a never-before-seen new genre of
+      variety shows focused in an urban environment. The MCs and guests complete
+      missions in a landmark to win the race. The show has since shifted to a more
+      familiar reality-variety show concept focused on games. It has garnered attention
+      as being the come-back program for Yoo Jae-suk, the main MC of the program, after
+      leaving Good Sunday's Family Outing in February 2010.
+    </p>
+    <p>Airing at the 5 pm KST time slot for most of its run, Running Man switched to the
+      second part of Good Sunday (which happened May 22 and May 29, 2011 with Kim Yu-na's
+      Kiss and Cry but was quickly switched back due to low ratings) beginning May 6, 2012,
+      airing after Kim Byung-man's Law of the Jungle 2 at 6:10 pm and airing against KBS2 Happy
+      Sunday's 1 Night 2 Days Season 2 and MBC Sunday Night's I Am a Singer 2.</p>
+  </div>
+
+
+  <h2><b>Cast</b></h2>
+  <ul>
+    <p>Yoo Jae-Suk</p>
+    <p>Haha</p>
+    <p>Ji Suk-Jin</p>
+    <p>Kim Jong-kook</p>
+    <p>Lee Kwang-soo</p>
+    <p>Song Ji-hyo</p>
+    <p>Jeon So-min</p>
+    <p>Yang Se-chan</p>
+  </ul>
+  <ion-list></ion-list>
+
+  <h4>Comments</h4>
+  <ion-textarea [(ngModel)]="message" type="text" placeholder="Leave a Comment... "></ion-textarea>
+  <ion-button color="light" float-right round (click)="sendComment()">Send</ion-button>
+  <div class="comment-box">
+    <ion-card *ngFor="let comment of comments">
+      <ion-card-content>
+        <strong>{{comment.message}}</strong>
+        <p>Anonymous</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
